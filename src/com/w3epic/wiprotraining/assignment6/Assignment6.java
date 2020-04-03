@@ -52,9 +52,9 @@ public class Assignment6 {
 			} catch (ArithmeticException e) {
 				System.out.println(e.getMessage());
 			} catch (NegativeValuesException e) {
-				System.out.println(e.getMessage());
+				System.out.println(e+": "+"number is negetive");  // you need to pass the message here for negetiveInteger
 			} catch (ValuesOutOfRangeException e) {
-				System.out.println(e.getMessage());
+				System.out.println(e+": "+"number is positive"); // you need to pass the message here for outOfRange
 			}
 			
 			System.out.println("Name: " + name);
@@ -67,4 +67,17 @@ public class Assignment6 {
 
 	}
 
+}
+class NegativeValuesException extends Exception {
+
+    public NegativeValuesException() {
+	    
+    }
+}
+
+class ValuesOutOfRangeException extends Exception {
+
+    public ValuesOutOfRangeException() {
+	    
+    }
 }
